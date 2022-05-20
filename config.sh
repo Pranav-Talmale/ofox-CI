@@ -1,17 +1,12 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export FOX_BRANCH="fox_11.0"
+export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_lisa.git -b no-script-no-module"
 
-export DEVICE="beryllium"
+export DEVICE="lisa"
 export OEM="xiaomi"
-
-# Build Target
-## "recoveryimage" - for A-Only Devices without using Vendor Boot
-## "bootimage" - for A/B devices without recovery partition (and without vendor boot)
-## "vendorbootimage" - for devices Using vendor boot for the recovery ramdisk (Usually for devices shipped with Android 12 or higher)
-export TARGET="recoveryimage"
+export TARGET="adbd bootimage"
 
 export OUTPUT="OrangeFox*.zip"
 
@@ -21,11 +16,7 @@ export OUTPUT="OrangeFox*.zip"
 #export PLATFORM="sm6150" # Leave it commented if you want to clone the kernel to kernel/$OEM/$DEVICE
 
 # Extra Command
-export EXTRA_CMD="git clone https://github.com/OrangeFoxRecovery/Avatar.git misc"
-
-# Magisk
-## Use the Latest Release of Magisk for the OrangeFox addon
-OF_USE_LATEST_MAGISK=true
+export EXTRA_CMD="export FOX_BUILD_TYPE="Unofficial" export OF_MAINTAINER="Pranav-Talmale" export OF_USE_LATEST_MAGISK = "1""
 
 # Not Recommended to Change
 export SYNC_PATH="$HOME/work" # Full (absolute) path.
