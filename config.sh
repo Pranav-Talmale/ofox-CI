@@ -16,7 +16,11 @@ export OUTPUT="OrangeFox*.zip"
 #export PLATFORM="sm6150" # Leave it commented if you want to clone the kernel to kernel/$OEM/$DEVICE
 
 # Extra Command
-export EXTRA_CMD="export FOX_BUILD_TYPE="Unofficial" export OF_MAINTAINER="Pranav-Talmale" export OF_USE_LATEST_MAGISK = "1""
+export EXTRA_CMD="export FOX_BUILD_TYPE="Unofficial" export OF_MAINTAINER="Pranav-Talmale""
+
+# Magisk
+## Use the Latest Release of Magisk for the OrangeFox addon
+OF_USE_LATEST_MAGISK=true
 
 # Not Recommended to Change
 export SYNC_PATH="$HOME/work" # Full (absolute) path.
