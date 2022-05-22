@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_lisa.git -b no-script-no-module"
+export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_lisa.git -b inline-build"
 
 export DEVICE="lisa"
 export OEM="xiaomi"
@@ -12,7 +12,7 @@ export OUTPUT="OrangeFox*.zip"
 
 # Kernel Source
 # Uncomment the next line if you want to clone a kernel source.
-#export KERNEL_SOURCE="https://gitlab.com/OrangeFox/kernel/mojito.git"
+export KERNEL_SOURCE="https://github.com/Atom-X-Devs/android_kernel_xiaomi_sm7325.git -b inline"
 #export PLATFORM="sm6150" # Leave it commented if you want to clone the kernel to kernel/$OEM/$DEVICE
 
 # Extra Command
