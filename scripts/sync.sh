@@ -48,7 +48,9 @@ git clone $DT_LINK $DT_PATH || { echo "ERROR: Failed to Clone the Device Trees!"
 [ ! -z "$KERNEL_SOURCE" ] && git clone --depth=1 --single-branch $KERNEL_SOURCE $KERNEL_PATH
 
 #Clone Neutron Clang
-git clone https://gitlab.com/dakkshesh07/neutron-clang.git prebuilts/clang/host/linux-x86 clang-neutron 
+cd ~/work/prebuilts/clang/host/linux-x86
+git clone https://gitlab.com/dakkshesh07/neutron-clang.git clang-neutron
+cd ~/work 
 
 # Magisk
 if [[ $OF_USE_LATEST_MAGISK = "true" || $OF_USE_LATEST_MAGISK = "1" ]]; then
