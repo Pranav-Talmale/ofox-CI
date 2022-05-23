@@ -47,11 +47,6 @@ git clone $DT_LINK $DT_PATH || { echo "ERROR: Failed to Clone the Device Trees!"
 # only if the Kernel Source is Specified in the Config
 [ ! -z "$KERNEL_SOURCE" ] && git clone --depth=1 --single-branch $KERNEL_SOURCE $KERNEL_PATH
 
-#Clone Neutron Clang
-cd ~/work/prebuilts/clang/host/linux-x86
-git clone https://gitlab.com/dakkshesh07/neutron-clang.git clang-neutron
-cd ~/work 
-
 # Magisk
 if [[ $OF_USE_LATEST_MAGISK = "true" || $OF_USE_LATEST_MAGISK = "1" ]]; then
 	echo "Downloading the Latest Release of Magisk..."
@@ -66,6 +61,13 @@ if [[ $OF_USE_LATEST_MAGISK = "true" || $OF_USE_LATEST_MAGISK = "1" ]]; then
 	cd $SYNC_PATH >/dev/null
 	echo "Done!"
 fi
+
+#Clone Neutron Clang
+echo "Downloading the Latest Release of Neutron Clang..."
+cd ~/work/prebuilts/clang/host/linux-x86
+git clone https://gitlab.com/dakkshesh07/neutron-clang.git -b Neutron-15 clang-neutron
+echo "Neutron Clang Downloaded Successfully"
+cd ~/work 
 
 # Exit
 exit 0
