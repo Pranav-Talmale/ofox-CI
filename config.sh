@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_lisa.git -b script-module-load"
+export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_lisa.git -b script-miui"
 
 export DEVICE="lisa"
 export OEM="xiaomi"
@@ -16,7 +16,7 @@ export OUTPUT="OrangeFox*.zip"
 #export PLATFORM="sm6150" # Leave it commented if you want to clone the kernel to kernel/$OEM/$DEVICE
 
 # Extra Command
-export EXTRA_CMD="export FOX_BUILD_TYPE="Unofficial" export OF_MAINTAINER="Pranav-Talmale""
+#export EXTRA_CMD="y u bulli me"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
