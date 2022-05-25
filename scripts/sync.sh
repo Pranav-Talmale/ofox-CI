@@ -66,7 +66,7 @@ fi
 if [[ $OF_USE_NEUTRON_CLANG = "true" || $OF_USE_NEUTRON_CLANG = "1" ]]; then
 	echo "Downloading the Latest Release of Neutron Clang..."
     cd $SYNC_PATH/prebuilts/clang/host/linux-x86
-    git clone https://gitlab.com/dakkshesh07/neutron-clang.git -b Neutron-15 clang-neutron
+    git clone https://gitlab.com/dakkshesh07/neutron-clang.git -b Neutron-15 $CUSTOM_CLANG_FOLDER
     echo "Neutron Clang Downloaded Successfully"
 	cd $SYNC_PATH >/dev/null
 	echo "Done!"
