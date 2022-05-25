@@ -28,7 +28,7 @@ OF_USE_LATEST_MAGISK=true
 # Can't clone both clangs. Uncomment the clang that you don't need.
 OF_USE_NEUTRON_CLANG=true
 #OF_USE_PROTON_CLANG=true
-export CUSTOM_CLANG_FOLDER="clang_13.0.0"
+export CUSTOM_CLANG_FOLDER="clang-neutron"
 
 # Not Recommended to Change
 export SYNC_PATH="$HOME/work" # Full (absolute) path.
