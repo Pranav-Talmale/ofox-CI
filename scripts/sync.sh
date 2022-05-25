@@ -62,12 +62,23 @@ if [[ $OF_USE_LATEST_MAGISK = "true" || $OF_USE_LATEST_MAGISK = "1" ]]; then
 	echo "Done!"
 fi
 
-#Clone Neutron Clang
+# Neutron Clang
 if [[ $OF_USE_NEUTRON_CLANG = "true" || $OF_USE_NEUTRON_CLANG = "1" ]]; then
 	echo "Downloading the Latest Release of Neutron Clang..."
     cd $SYNC_PATH/prebuilts/clang/host/linux-x86
     git clone https://gitlab.com/dakkshesh07/neutron-clang.git -b Neutron-15 $CUSTOM_CLANG_FOLDER
     echo "Neutron Clang Downloaded Successfully"
+	cd $SYNC_PATH >/dev/null
+	echo "Done!"
+fi
+
+
+# Proton Clang
+if [[ $OF_USE_PROTON_CLANG = "true" || $OF_USE_PROTON_CLANG = "1" ]]; then
+	echo "Downloading the Latest Release of Proton Clang..."
+    cd $SYNC_PATH/prebuilts/clang/host/linux-x86
+    git clone https://github.com/kdrag0n/proton-clang.git -b master $CUSTOM_CLANG_FOLDER
+    echo "Proton Clang Downloaded Successfully"
 	cd $SYNC_PATH >/dev/null
 	echo "Done!"
 fi
