@@ -50,6 +50,11 @@ if [[ $OF_USE_LATEST_MAGISK = "true" || $OF_USE_LATEST_MAGISK = "1" ]]; then
 	export FOX_USE_SPECIFIC_MAGISK_ZIP=$("ls" ~/Magisk/Magisk*.zip)
 fi
 
+#Neutron Clang 15
+if [[ $OF_USE_NEUTRON_CLANG = "true" || $OF_USE_NEUTRON_CLANG = "1" ]]; then
+    echo "Using the Latest Release Neutron Clang to build kernel..."
+fi
+
 # Legacy Build Systems
 if [ $BRANCH_INT -le 6 ]; then
     export OF_DISABLE_KEYMASTER2=1 # Disable Keymaster2

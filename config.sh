@@ -22,6 +22,11 @@ export OUTPUT="OrangeFox*.zip"
 ## Use the Latest Release of Magisk for the OrangeFox addon
 OF_USE_LATEST_MAGISK=true
 
+# Neutron Clang 15
+# Cloned in ~/work/prebuilts/clang/host/linux-x86/clang-neutron
+# Custom Clang is needed if you face issues while building with a kernel source. Make sure to add appropriate flags in your BoardConfig.mk to use custom clang.
+OF_USE_NEUTRON_CLANG=true
+
 # Not Recommended to Change
 export SYNC_PATH="$HOME/work" # Full (absolute) path.
 export USE_CCACHE=1

@@ -63,11 +63,14 @@ if [[ $OF_USE_LATEST_MAGISK = "true" || $OF_USE_LATEST_MAGISK = "1" ]]; then
 fi
 
 #Clone Neutron Clang
-echo "Downloading the Latest Release of Neutron Clang..."
-cd ~/work/prebuilts/clang/host/linux-x86
-git clone https://gitlab.com/dakkshesh07/neutron-clang.git -b Neutron-15 clang-neutron
-echo "Neutron Clang Downloaded Successfully"
-cd ~/work 
+if [[ $OF_USE_NEUTRON_CLANG = "true" || $OF_USE_NEUTRON_CLANG = "1" ]]; then
+	echo "Downloading the Latest Release of Neutron Clang..."
+    cd $SYNC_PATH/prebuilts/clang/host/linux-x86
+    git clone https://gitlab.com/dakkshesh07/neutron-clang.git -b Neutron-15 clang-neutron
+    echo "Neutron Clang Downloaded Successfully"
+	cd $SYNC_PATH >/dev/null
+	echo "Done!"
+fi
 
 # Exit
 exit 0
