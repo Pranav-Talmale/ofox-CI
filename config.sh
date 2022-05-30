@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/Pranav-Talmale/recovery_device_xiaomi_pissarro.git -b no-decryption"
+export DT_LINK="https://github.com/Pranav-Talmale/recovery_device_xiaomi_pissarro.git -b  M.A.R.K"
 
 export DEVICE="pissarro"
 export OEM="xiaomi"
