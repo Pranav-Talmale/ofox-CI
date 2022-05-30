@@ -39,7 +39,7 @@ export LC_ALL="C"
 export FOX_BUILD_TYPE="Unofficial"
 
 # Default Maintainer's Name
-export OF_MAINTAINER="Pranav-Talmale"
+#export OF_MAINTAINER="Pranav-Talmale"
 
 # Set BRANCH_INT variable for future use
 BRANCH_INT=$(echo $SYNC_BRANCH | cut -d. -f1)
