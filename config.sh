@@ -43,4 +43,4 @@ else
     export KERNEL_PATH="kernel/$OEM/$DEVICE"
 fi
 export DT_PATH="device/$OEM/$DEVICE"
-##
+#
