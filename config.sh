@@ -4,7 +4,7 @@
 export FOX_BRANCH="fox_11.0"
 export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_raphael-ofox.git -b fox_11.0-backport"
 
-export DEVICE="recoveryimage"
+export DEVICE="raphael"
 export OEM="xiaomi"
 export TARGET="recoveryimage"
 
