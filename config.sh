@@ -27,8 +27,8 @@ OF_USE_LATEST_MAGISK=true
 # Custom Clang is needed if you face issues while building with a kernel source. Make sure to add appropriate flags in your BoardConfig.mk to use custom clang.
 # Can't clone both clangs. Uncomment the clang that you don't need.
 #OF_USE_NEUTRON_CLANG=true
-#OF_USE_PROTON_CLANG=true
-#export CUSTOM_CLANG_FOLDER="clang_13.0.0"
+OF_USE_PROTON_CLANG=true
+export CUSTOM_CLANG_FOLDER="clang_13.0.0"
 
 # Not Recommended to Change
 export SYNC_PATH="$HOME/work" # Full (absolute) path.
