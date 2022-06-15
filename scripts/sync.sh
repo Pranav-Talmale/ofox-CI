@@ -77,7 +77,7 @@ fi
 if [[ $OF_USE_PROTON_CLANG = "true" || $OF_USE_PROTON_CLANG = "1" ]]; then
 	echo "Downloading the Latest Release of Proton Clang..."
     cd $SYNC_PATH/prebuilts/clang/host/linux-x86
-    git clone https://github.com/kdrag0n/proton-clang.git -b master $CUSTOM_CLANG_FOLDER
+    git clone https://github.com/kdrag0n/proton-clang.git --depth=1 -b master $CUSTOM_CLANG_FOLDER
     echo "Proton Clang Downloaded Successfully"
 	cd $SYNC_PATH >/dev/null
 	echo "Done!"
