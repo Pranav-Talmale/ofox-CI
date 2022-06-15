@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_raphael-ofox.git -b kernel-build"
+export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_raphael-ofox.git -b test"
 
 export DEVICE="raphael"
 export OEM="xiaomi"
