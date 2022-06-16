@@ -16,7 +16,7 @@ export KERNEL_SOURCE="https://github.com/Pranav-Talmale/kernel_xiaomi_raphael.gi
 #export PLATFORM="sm6150" # Leave it commented if you want to clone the kernel to kernel/$OEM/$DEVICE
 
 # Extra Command
-#export EXTRA_CMD="y u bulli me"
+export EXTRA_CMD="export PATH="$(shell pwd)/prebuilts/clang/host/linux-x86/clang-proton/bin:$PATH""
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
