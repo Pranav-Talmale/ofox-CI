@@ -2,11 +2,11 @@
 
 # Device
 export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_raphael-ofox.git -b test"
+export DT_LINK="https://github.com/Pranav-Talmale/recovery_device_xiaomi_pissarro-ofox.git -b master"
 
-export DEVICE="raphael"
+export DEVICE="pissarro"
 export OEM="xiaomi"
-export TARGET="recoveryimage"
+export TARGET="bootimage"
 
 export OUTPUT="OrangeFox*.zip"
 
