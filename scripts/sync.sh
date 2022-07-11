@@ -3,6 +3,11 @@
 # Source Vars
 source $CONFIG
 
+# Check if vendorboot is being made with fox_11.0 sources
+if [ "$FOX_BRANCH" = "fox_11.0" && "$TARGET"="vendorbootimage" ]; then
+	echo "Warning! Can't make vendorbootimage with fox_11.0 sources" && exit 1;
+fi
+
 # Change to the Home Directory
 cd ~
 
@@ -26,6 +31,25 @@ fi
 
 # Sync the Sources
 ./orangefox_sync.sh --branch $SYNC_BRANCH --path $SYNC_PATH || { echo "ERROR: Failed to Sync OrangeFox Sources!" && exit 1; }
+
+# Clone required patches for twrp-12.1
+if [ "$FOX_BRANCH" = "fox_12.1" ]; then
+    echo "Cloning required patches for twrp to build..."
+    cd system/vold
+    echo "Cloning LibVold Patch...."	
+	git fetch https://gerrit.twrp.me/android_system_vold refs/changes/40/5540/7 && git cherry-pick FETCH_HEAD # libvold patch
+    cd $SYNC_PATH/bootable/recovery
+	echo "Cloning FScrypt patch..."
+	git fetch https://gerrit.twrp.me/android_bootable_recovery refs/changes/05/5405/25 && git cherry-pick FETCH_HEAD || { echo "ERROR: Failed to Clone fscrypt patch!" && exit 1; } # fscrypt patch
+fi
+
+if [ "$OF_CLONE_SKKK_PATCHES" = "true" ]; then
+    cd $SYNC_PATH/system/core
+	echo "Cloning other miscellaneous patches..."
+	git fetch https://gerrit.twrp.me/android_system_core refs/changes/75/5675/6 && git cherry-pick FETCH_HEAD # first_stage_init # skkk #sm8350 
+	cd $SYNC_PATH/bootable/recovery
+	git fetch https://gerrit.twrp.me/android_bootable_recovery refs/changes/93/5693/2 && git cherry-pick FETCH_HEAD # exfat #skkk
+fi
 
 # Change to the Source Directory
 cd $SYNC_PATH

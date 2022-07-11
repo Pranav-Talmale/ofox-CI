@@ -1,12 +1,17 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/Pranav-Talmale/recovery_device_xiaomi_pissarro-ofox.git -b master"
+export FOX_BRANCH="fox_12.1"
+export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_raphael-twrp.git -b twrp-12.1-FBEv1"
 
-export DEVICE="pissarro"
+export DEVICE="raphael"
 export OEM="xiaomi"
-export TARGET="bootimage"
+export TARGET="recoveryimage"
+
+# supported targets : 
+# 1. recoveryimage
+# 2. bootimage or adbd bootimage
+# 3. vendorbootimage (only to be used with fox_12.1 sources)
 
 export OUTPUT="OrangeFox*.zip"
 
@@ -20,7 +25,7 @@ export OUTPUT="OrangeFox*.zip"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
-OF_USE_LATEST_MAGISK=true
+export OF_USE_LATEST_MAGISK=true
 
 # Clang
 # Cloned in ~/work/prebuilts/clang/host/linux-x86/$CUSTOM_CLANG_FOLDER
@@ -29,6 +34,8 @@ OF_USE_LATEST_MAGISK=true
 #OF_USE_NEUTRON_CLANG=true
 #OF_USE_PROTON_CLANG=true
 #export CUSTOM_CLANG_FOLDER="clang-proton"
+
+#export OF_CLONE_SKKK_PATCHES = true
 
 # Not Recommended to Change
 export SYNC_PATH="$HOME/work" # Full (absolute) path.
