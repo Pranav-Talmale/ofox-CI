@@ -2,11 +2,11 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_raphael-twrp.git -b twrp-12.1-FBEv1"
+export DT_LINK="https://github.com/Pranav-Talmale/alioth-ofox.git -b fox_12.1"
 
-export DEVICE="raphael"
+export DEVICE="alioth"
 export OEM="xiaomi"
-export TARGET="recoveryimage"
+export TARGET="adbd bootimage"
 
 # supported targets : 
 # 1. recoveryimage
