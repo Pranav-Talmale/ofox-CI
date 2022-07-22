@@ -2,11 +2,11 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/Pranav-Talmale/alioth-ofox.git -b fox_12.1"
+export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_lisa.git -b twrp-12.1"
 
-export DEVICE="alioth"
+export DEVICE="lisa"
 export OEM="xiaomi"
-export TARGET="adbd bootimage"
+export TARGET="bootimage"
 
 # supported targets : 
 # 1. recoveryimage
