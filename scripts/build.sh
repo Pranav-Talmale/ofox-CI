@@ -24,6 +24,9 @@ if [ "$FOX_BRANCH" = "fox_11.0" ]; then
     touch frameworks/base/core/xsd/vts/Android.mk 2>/dev/null || echo
 fi
 
+# Set a build VAR to adapt to new vendorsetup.sh script
+export FOX_BUILD_DEVICE=$DEVICE
+
 # Prepare the Build Environment
 source build/envsetup.sh
 
