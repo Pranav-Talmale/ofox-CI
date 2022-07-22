@@ -3,6 +3,10 @@
 # Source Vars
 source $CONFIG
 
+if [ "$TARGET" = "vendorbootimage" ]; then
+zip $OUTPUT vendorboot.img
+fi
+
 # Change to the Source Directory
 cd $SYNC_PATH
 
