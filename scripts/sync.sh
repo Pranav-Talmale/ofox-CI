@@ -32,14 +32,6 @@ fi
 # Sync the Sources
 ./orangefox_sync.sh --branch $SYNC_BRANCH --path $SYNC_PATH || { echo "ERROR: Failed to Sync OrangeFox Sources!" && exit 1; }
 
-if [ "$OF_CLONE_SKKK_PATCHES" = "true" ]; then
-    cd $SYNC_PATH/system/core
-	echo "Cloning other miscellaneous patches..."
-	git fetch https://gerrit.twrp.me/android_system_core refs/changes/75/5675/6 && git cherry-pick FETCH_HEAD || { echo "WARNING: Failed to Clone a misc. patch! Trying to clone again" && git fetch https://gerrit.twrp.me/android_system_core refs/changes/75/5675/6 && git cherry-pick FETCH_HEAD; } # first_stage_init # skkk #sm8350 
-	cd $SYNC_PATH/bootable/recovery
-	git fetch https://gerrit.twrp.me/android_bootable_recovery refs/changes/93/5693/2 && git cherry-pick FETCH_HEAD || { echo "WARNING: Failed to Clone a misc. patch! Trying to clone again" && git fetch https://gerrit.twrp.me/android_bootable_recovery refs/changes/93/5693/2 && git cherry-pick FETCH_HEAD; } # exfat #skkk
-fi
-
 # Change to the Source Directory
 cd $SYNC_PATH
 
@@ -94,6 +86,14 @@ if [[ $OF_USE_PROTON_CLANG = "true" || $OF_USE_PROTON_CLANG = "1" ]]; then
     echo "Proton Clang Downloaded Successfully"
 	cd $SYNC_PATH >/dev/null
 	echo "Done!"
+fi
+
+if [ "$OF_CLONE_SKKK_PATCHES" = "true" ]; then
+    cd $SYNC_PATH/system/core
+	echo "Cloning other miscellaneous patches..."
+	git fetch https://gerrit.twrp.me/android_system_core refs/changes/75/5675/6 && git cherry-pick FETCH_HEAD || { echo "WARNING: Failed to Clone a misc. patch! Trying to clone again" && git fetch https://gerrit.twrp.me/android_system_core refs/changes/75/5675/6 && git cherry-pick FETCH_HEAD; } # first_stage_init # skkk #sm8350 
+    cd $SYNC_PATH/bootable/recovery
+	git fetch https://gerrit.twrp.me/android_bootable_recovery refs/changes/93/5693/2 && git cherry-pick FETCH_HEAD || { echo "WARNING: Failed to Clone a misc. patch! Trying to clone again" && git fetch https://gerrit.twrp.me/android_bootable_recovery refs/changes/93/5693/2 && git cherry-pick FETCH_HEAD; } # exfat #skkk
 fi
 
 # Exit
