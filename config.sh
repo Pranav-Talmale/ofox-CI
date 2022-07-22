@@ -35,7 +35,7 @@ export OF_USE_LATEST_MAGISK=true
 #OF_USE_PROTON_CLANG=true
 #export CUSTOM_CLANG_FOLDER="clang-proton"
 
-#export OF_CLONE_SKKK_PATCHES = true
+export OF_CLONE_SKKK_PATCHES = true
 
 # Not Recommended to Change
 export SYNC_PATH="$HOME/work" # Full (absolute) path.
