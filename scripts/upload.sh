@@ -3,10 +3,6 @@
 # Source Vars
 source $CONFIG
 
-if [ "$TARGET" = "vendorbootimage" ]; then
-zip $OUTPUT vendorboot.img
-fi
-
 # Change to the Source Directory
 cd $SYNC_PATH
 
@@ -20,6 +16,10 @@ echo "============================"
 
 # Change to the Output Directory
 cd out/target/product/${DEVICE}
+
+if [ "$TARGET" = "vendorbootimage" ]; then
+zip $OUTPUT vendorboot.img
+fi
 
 # Set FILENAME var
 FILENAME=$(echo $OUTPUT)
