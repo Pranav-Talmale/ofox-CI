@@ -18,7 +18,7 @@ echo "============================"
 cd out/target/product/${DEVICE}
 
 if [ "$TARGET" = "vendorbootimage" ]; then
-zip $OUTPUT vendorboot.img
+zip $OUTPUT vendor_boot.img
 fi
 
 # Set FILENAME var
