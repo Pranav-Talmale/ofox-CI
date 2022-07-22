@@ -3,11 +3,6 @@
 # Source Vars
 source $CONFIG
 
-# Check if vendorboot is being made with fox_11.0 sources
-if [ "$FOX_BRANCH" = "fox_11.0" && "$TARGET"="vendorbootimage" ]; then
-	echo "Warning! Can't make vendorbootimage with fox_11.0 sources" && exit 1;
-fi
-
 # Change to the Home Directory
 cd ~
 
@@ -88,13 +83,12 @@ if [[ $OF_USE_PROTON_CLANG = "true" || $OF_USE_PROTON_CLANG = "1" ]]; then
 	echo "Done!"
 fi
 
-if [ "$OF_CLONE_SKKK_PATCHES" = "true" ]; then
+# Clone extra skkk patches
     cd $SYNC_PATH/system/core
-	echo "Cloning other miscellaneous patches..."
+     echo "Cloning other miscellaneous patches..."
 	git fetch https://gerrit.twrp.me/android_system_core refs/changes/75/5675/6 && git cherry-pick FETCH_HEAD || { echo "WARNING: Failed to Clone a misc. patch! Trying to clone again" && git fetch https://gerrit.twrp.me/android_system_core refs/changes/75/5675/6 && git cherry-pick FETCH_HEAD; } # first_stage_init # skkk #sm8350 
     cd $SYNC_PATH/bootable/recovery
 	git fetch https://gerrit.twrp.me/android_bootable_recovery refs/changes/93/5693/2 && git cherry-pick FETCH_HEAD || { echo "WARNING: Failed to Clone a misc. patch! Trying to clone again" && git fetch https://gerrit.twrp.me/android_bootable_recovery refs/changes/93/5693/2 && git cherry-pick FETCH_HEAD; } # exfat #skkk
-fi
 
 # Exit
 exit 0
