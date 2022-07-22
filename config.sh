@@ -2,11 +2,11 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_lisa.git -b fox_12.1"
+export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_lisa.git -b fox_12.1-vb"
 
 export DEVICE="lisa"
 export OEM="xiaomi"
-export TARGET="bootimage"
+export TARGET="vendorbootimage"
 
 # supported targets : 
 # 1. recoveryimage
