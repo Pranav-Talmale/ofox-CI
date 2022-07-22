@@ -39,7 +39,10 @@ export LC_ALL="C"
 export FOX_BUILD_TYPE="Unofficial"
 
 # Default Maintainer's Name
-#export OF_MAINTAINER="Pranav-Talmale"
+export OF_MAINTAINER="Pranav-Talmale"
+
+# Set a build VAR to adapt to new vendorsetup.sh script
+export FOX_BUILD_DEVICE=$DEVICE
 
 # Set BRANCH_INT variable for future use
 BRANCH_INT=$(echo $SYNC_BRANCH | cut -d. -f1)
