@@ -84,11 +84,13 @@ if [[ $OF_USE_PROTON_CLANG = "true" || $OF_USE_PROTON_CLANG = "1" ]]; then
 fi
 
 # Clone extra skkk patches
+if [[ $OF_CLONE_SKKK_PATCHES = "true" ]]; then
     cd $SYNC_PATH/system/core
      echo "Cloning other miscellaneous patches..."
 	git fetch https://gerrit.twrp.me/android_system_core refs/changes/75/5675/6 && git cherry-pick FETCH_HEAD || { echo "WARNING: Failed to Clone a misc. patch! Trying to clone again" && git fetch https://gerrit.twrp.me/android_system_core refs/changes/75/5675/6 && git cherry-pick FETCH_HEAD; } # first_stage_init # skkk #sm8350 
     cd $SYNC_PATH/bootable/recovery
 	git fetch https://gerrit.twrp.me/android_bootable_recovery refs/changes/93/5693/2 && git cherry-pick FETCH_HEAD || { echo "WARNING: Failed to Clone a misc. patch! Trying to clone again" && git fetch https://gerrit.twrp.me/android_bootable_recovery refs/changes/93/5693/2 && git cherry-pick FETCH_HEAD; } # exfat #skkk
+fi
 
 # Exit
 exit 0
