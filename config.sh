@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/Pranav-Talmale/device_xiaomi_pissarro.git -b fox_11.0"
+export FOX_BRANCH="fox_12.1"
+export DT_LINK="https://github.com/Pranav-Talmale/device_xiaomi_pissarro.git -b fox_12.1"
 
 export DEVICE="pissarro"
 export OEM="xiaomi"
