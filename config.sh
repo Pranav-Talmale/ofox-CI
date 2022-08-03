@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_lisa.git -b fox_12.1"
+export DT_LINK="https://github.com/HellVikings/device_xiaomi_laurel_sprout-recovery.git -b 12.1"
 
 export DEVICE="lisa"
 export OEM="xiaomi"
@@ -25,7 +25,7 @@ export OUTPUT="OrangeFox*.zip"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
-export OF_USE_LATEST_MAGISK=true
+#export OF_USE_LATEST_MAGISK=true
 
 # Clang
 # Cloned in ~/work/prebuilts/clang/host/linux-x86/$CUSTOM_CLANG_FOLDER
