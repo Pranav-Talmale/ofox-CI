@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/HellVikings/device_xiaomi_laurel_sprout-recovery.git -b 12.1"
+export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_raphael-twrp.git -b twrp-12.1-FBEv2"
 
 export DEVICE="lisa"
 export OEM="xiaomi"
