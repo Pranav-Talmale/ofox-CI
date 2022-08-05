@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_raphael-twrp.git -b twrp-12.1-FBEv2"
+export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_raphael-twrp.git -b twrp-12.1-merged"
 
 export DEVICE="raphael"
 export OEM="xiaomi"
@@ -21,7 +21,7 @@ export OUTPUT="OrangeFox*.zip"
 #export PLATFORM="sm6150" # Leave it commented if you want to clone the kernel to kernel/$OEM/$DEVICE
 
 # Extra Command
-#export EXTRA_CMD="export PATH="$(shell pwd)/prebuilts/clang/host/linux-x86/clang-proton/bin:$PATH""
+export EXTRA_CMD="export FOX_VARIANT="FBEv2""
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
