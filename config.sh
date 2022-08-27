@@ -2,10 +2,10 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://gitlab.com/OrangeFox/device/alioth.git -b fox_12.1"
+export DT_LINK="https://github.com/Pranav-Talmale/android_device_motorola_dubai-twrp.git -b twrp-12.1"
 
-export DEVICE="alioth"
-export OEM="xiaomi"
+export DEVICE="dubai"
+export OEM="motorola"
 export TARGET="adbd bootimage"
 
 # supported targets : 
@@ -35,7 +35,7 @@ export OF_USE_LATEST_MAGISK=true
 #OF_USE_PROTON_CLANG=true
 #export CUSTOM_CLANG_FOLDER="clang-proton"
 
-#export OF_CLONE_SKKK_PATCHES = true
+export OF_CLONE_SKKK_PATCHES = true
 
 # Not Recommended to Change
 export SYNC_PATH="$HOME/work" # Full (absolute) path.
