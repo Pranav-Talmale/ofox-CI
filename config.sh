@@ -2,10 +2,10 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/Pranav-Talmale/android_device_motorola_dubai-twrp.git -b twrp-12.1"
+export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_lisa.git -b fox_12.1"
 
-export DEVICE="dubai"
-export OEM="motorola"
+export DEVICE="lisa"
+export OEM="xiaomi"
 export TARGET="adbd bootimage"
 
 # supported targets : 
