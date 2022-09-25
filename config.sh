@@ -2,9 +2,9 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_lisa.git -b fox_12.1"
+export DT_LINK="https://github.com/Pranav-Talmale/recovery_device_xiaomi_munch.git -b fox_12.1"
 
-export DEVICE="lisa"
+export DEVICE="munch"
 export OEM="xiaomi"
 export TARGET="adbd bootimage"
 
@@ -35,7 +35,7 @@ export OF_USE_LATEST_MAGISK=true
 #OF_USE_PROTON_CLANG=true
 #export CUSTOM_CLANG_FOLDER="clang-proton"
 
-export OF_CLONE_SKKK_PATCHES=true
+#export OF_CLONE_SKKK_PATCHES=true
 
 # Not Recommended to Change
 export SYNC_PATH="$HOME/work" # Full (absolute) path.
