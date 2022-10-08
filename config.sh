@@ -2,11 +2,11 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/Pranav-Talmale/recovery_device_xiaomi_munch.git -b fox_12.1"
+export DT_LINK="https://github.com/Pranav-Talmale/recovery_device_xiaomi_munch.git -b hos"
 
 export DEVICE="munch"
 export OEM="xiaomi"
-export TARGET="adbd bootimage"
+export TARGET="vendorbootimage"
 
 # supported targets : 
 # 1. recoveryimage
