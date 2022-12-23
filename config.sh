@@ -2,11 +2,11 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_raphael-twrp.git"
+export DT_LINK="https://gitlab.com/OrangeFox/device/munch.git"
 
-export DEVICE="raphael"
+export DEVICE="munch"
 export OEM="xiaomi"
-export TARGET="recoveryimage"
+export TARGET="adbd bootimage"
 
 # supported targets : 
 # 1. recoveryimage
@@ -21,7 +21,7 @@ export OUTPUT="OrangeFox*.zip"
 #export PLATFORM="sm6150" # Leave it commented if you want to clone the kernel to kernel/$OEM/$DEVICE
 
 # Extra Command
-export EXTRA_CMD="export FOX_VARIANT="FBEv1""
+export EXTRA_CMD="export FOX_VARIANT="A12" && export FOX_BUILD_TYPE="Beta" && export FOX_VERSION="R11.1_2""
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
