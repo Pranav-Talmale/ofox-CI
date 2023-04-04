@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/Pranav-Talmale/recovery_device_xiaomi_munch.git"
+export DT_LINK="https://gitlab.com/OrangeFox/device/mikona"
 
 export DEVICE="munch"
 export OEM="xiaomi"
@@ -21,7 +21,7 @@ export OUTPUT="OrangeFox*.zip"
 #export PLATFORM="sm6150" # Leave it commented if you want to clone the kernel to kernel/$OEM/$DEVICE
 
 # Extra Command
-export EXTRA_CMD="export FOX_VARIANT="aospa" && export FOX_BUILD_TYPE="unofficial" && export FOX_VERSION="aospa""
+export EXTRA_CMD="export FOX_VARIANT="A12/A13" && export FOX_BUILD_TYPE="official" && export FOX_BUILD_DEVICE="munch""
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
