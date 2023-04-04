@@ -30,9 +30,6 @@ export FOX_BUILD_DEVICE=$DEVICE
 # Prepare the Build Environment
 source build/envsetup.sh
 
-# Run the Extra Command
-$EXTRA_CMD
-
 # export some Basic Vars
 export ALLOW_MISSING_DEPENDENCIES=true
 export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
@@ -46,6 +43,9 @@ export OF_MAINTAINER="Pranav-Talmale"
 
 # Set a build VAR to adapt to new vendorsetup.sh script
 export FOX_BUILD_DEVICE=$DEVICE
+
+# Run the Extra Command
+$EXTRA_CMD
 
 # Set BRANCH_INT variable for future use
 BRANCH_INT=$(echo $SYNC_BRANCH | cut -d. -f1)
