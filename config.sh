@@ -49,5 +49,5 @@ if [ ! -z "$PLATFORM" ]; then
 else
     export KERNEL_PATH="kernel/$OEM/$DEVICE"
 fi
-export DT_PATH="device/$OEM/$DEVICE"
+export DT_PATH="device/$OEM/mikona"
 #
