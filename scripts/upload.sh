@@ -15,7 +15,7 @@ echo "Uploading the Build..."
 echo "============================"
 
 # Change to the Output Directory
-cd out/target/product/${DEVICE}
+cd out/target/product/mikona
 
 if [ "$TARGET" = "vendorbootimage" ]; then
 zip $OUTPUT vendor_boot.img
