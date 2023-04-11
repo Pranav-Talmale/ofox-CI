@@ -21,7 +21,7 @@ export OUTPUT="OrangeFox*.zip"
 #export PLATFORM="sm6150" # Leave it commented if you want to clone the kernel to kernel/$OEM/$DEVICE
 
 # Extra Command
-export EXTRA_CMD="export FOX_VARIANT="A12/A13" && export FOX_BUILD_TYPE="official" && export FOX_BUILD_DEVICE="munch""
+export EXTRA_CMD="export FOX_VARIANT="A12-A13" && export FOX_BUILD_TYPE="official" && export FOX_BUILD_DEVICE="munch""
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
